@@ -53,7 +53,7 @@ const ShoppingCard = () => {
         {items.map((item, index) => (
           <div
             key={index}
-            className="bg-blue-800 p-4 rounded-md text-white text-center flex w-auto  mx-2 "
+            className="bg-red-800 p-4 rounded-md text-white text-center flex w-auto  mx-2 "
           >
             <div className="flex gap-3 justify-center items-center flex-col w-[300px]">
               <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -61,14 +61,10 @@ const ShoppingCard = () => {
                 <p className="pb-1">{item.availability[0].date}</p>
                 <p>Price : {item.availability[0].price} TL</p>
               </div>
-              <div className="flex gap-4">
-                <p>Check in : {item.checkIn}</p>
-                <p>Check out : {item.checkOut}</p>
-              </div>
 
               <Button
                 onClick={() => handleRemoveClick(item)}
-                className="w-full bg-blue-950"
+                className="w-full bg-red-950"
               >
                 Remove from the card
               </Button>
@@ -78,7 +74,7 @@ const ShoppingCard = () => {
       </div>
       <FormError message={error} />
       <FormSuccess message={success} />
-      <Button onClick={() => handleOnClick()} className="w-full bg-blue-950">
+      <Button onClick={() => handleOnClick()} className="w-full bg-red-950">
         Pay Now
       </Button>
     </div>

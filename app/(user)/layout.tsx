@@ -8,17 +8,16 @@ interface ProtectedLayoutProps {
 
 export const metadata: Metadata = {
   title: {
-    default: "Havuz ve Havuz",
-    template: "%s | Havuz ve Havuz",
+    default: "Tour",
+    template: "%s | Tour",
   },
 };
 
 const ProtectedLayout = ({ children }: ProtectedLayoutProps) => {
   return (
-    <div className="h-auto min-h-full w-full flex flex-col px-2 items-center   bg-blue-400">
+    <div className="h-auto min-h-full w-full flex flex-col px-2 items-center   bg-red-300">
       <Nav />
       <div className="mb-16">{children}</div>
-      <Footer />
     </div>
   );
 };

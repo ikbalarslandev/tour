@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 const HomePage = async () => {
   return (
-    <div className="flex flex-col sm:flex-row gap-4  justify-center">
-      <h1 className="text-center p-1 text-xl font-bold   text-blue-100  mb-10">
-        Daily Pool Rentals in Istanbul
+    <div className="flex flex-col  gap-4  justify-center items-center">
+      <h1 className="text-center pt-1 text-2xl font-bold   text-red-700  my-10">
+        Buisness tours in Milan
       </h1>
 
       <DatePickerForm />

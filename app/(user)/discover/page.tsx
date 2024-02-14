@@ -1,6 +1,7 @@
 import { getAllProperties } from "@/data/property";
 import PropertyCard from "@/components/user/property-card";
 import { Metadata } from "next";
+import data from "@/data/mockData";
 
 export const metadata: Metadata = {
   title: "Discover",
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
 };
 
 const DiscoverPage = async () => {
-  const properties = await getAllProperties();
+  // const properties = await getAllProperties();
+  const properties = data;
 
   return (
     <div className="flex flex-col sm:flex-row gap-4  justify-center">

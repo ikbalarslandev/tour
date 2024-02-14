@@ -2,6 +2,7 @@ import SingleProperty from "@/components/user/single-property";
 import { Metadata } from "next";
 import { getPropertyByTitle } from "@/data/property";
 import StructuredData from "@/components/user/structured-data";
+import data from "@/data/mockData";
 
 export async function generateMetadata({
   params,
@@ -22,7 +23,9 @@ const SinglePropertyPage = async ({
   params: { title: string };
 }) => {
   const title = params.title.split("-").join(" ");
-  const property = await getPropertyByTitle(title);
+  // const property = await getPropertyByTitle(title);
+  const property = data.find((item) => item.title === title);
+
   const sobj = JSON.stringify(
     property?.availability.find(
       (a: any) => a?.date === new Date().toLocaleDateString("en-GB")
